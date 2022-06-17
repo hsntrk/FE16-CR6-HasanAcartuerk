@@ -1,0 +1,9 @@
+<p>cart works!</p>
+
+<div class="cart-item" *ngFor="let item of items">
+    <img src="{{item.image}}" alt="">
+    <span>{{ item.name }} </span>
+    <span>{{ item.price | currency:'EUR' }}</span>
+
+</div>
+<p>{{total}}</p>

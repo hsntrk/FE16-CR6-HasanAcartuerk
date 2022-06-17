@@ -1,0 +1,29 @@
+<div class="row mb-4 ms-5 me-5 g-4 product-bottom">
+    <h2 class="text-center">Our specialties</h2>
+    <hr>
+    <div class="col-lg-4 col-md-6" *ngFor="let product of products ; index as productId">
+
+        <div class="card shadow-lg">
+            <img src="{{product.image}}" class="card-img-top img-thumbnail" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <a class="text-decoration-none" routerLink="products/{{productId}}">
+                        {{ product.name }}
+                    </a>
+                </h3>
+                <p class="card-text" *ngIf="product.description">
+                    {{ product.description }}
+                </p>
+                <h4>{{ product.price | currency:'EUR' }}</h4>
+                <div *ngIf="product">
+                    <button type="button" class="btn btn-primary rounded me-3"  routerLink="products/{{productId}}">Details</button>
+                    <button type="button" class="btn btn-success rounded" (click)="addToCart()">Order</button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>

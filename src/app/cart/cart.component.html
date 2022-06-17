@@ -84,7 +84,28 @@
             <label for="exampleInputAdress1" class="form-label">Adress</label>
             <input type="text" class="form-control" id="exampleInputAdress1">
         </div>
-        <button type="submit" class="btn btn-primary">Purchase</button>
-    </form>
-</div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Purchase
+        </button>
 
+    </form>
+
+
+    <!-- Modal for submit -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">We will deliver as soon as possible</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-thumbnail" src="/assets/img/ontheway.png" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

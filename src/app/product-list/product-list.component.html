@@ -19,7 +19,7 @@
                 <hr>
                 <div *ngIf="product.availability == true; else donotshow">
                     <button type="button" class="btn btn-primary rounded me-3"  routerLink="products/{{productId}}">Details</button>
-                    <button type="button" class="btn btn-success rounded" (click)="addToCart()">Order</button>
+                    <button type="button" class="btn btn-success rounded" (click)="addToCart(product)">Order</button>
                 </div>
                 <ng-template #donotshow>
                     <p class="text-danger">This product is not available.</p>

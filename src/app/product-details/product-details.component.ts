@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-// package that have some methods and properties that will help us to get the value from the URL and use it further
 import { products } from '../products';
 import { CartService } from '../cart.service';
 import { IProducts } from '../IProducts';

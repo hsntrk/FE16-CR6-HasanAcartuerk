@@ -5,6 +5,7 @@ export const products = [
     description:
       'Purple Sweet Potato Cream, Burrata, Sun-Dried Red & Yellow Tomatoes, Basil, Sweet Potatoes, Basil Pesto',
     image: '/assets/img/pizza_viola.jpg',
+    availability: true,
   },
 
   {
@@ -13,6 +14,7 @@ export const products = [
     description:
       'Pumpkin cream, mozzarella, grilled aubergine, grilled zucchini, yellow tomatoes, pistachio crumble, rocket',
     image: '/assets/img/pizza_arancione.jpg',
+    availability: true,
   },
 
   {
@@ -21,6 +23,7 @@ export const products = [
     description:
       'Zucchini cream, vegan feta cheese, mozzarella, pine nuts, pomegranate, basil pesto, oregano',
     image: '/assets/img/pizza_verde.jpg',
+    availability: false,
   },
 
   {
@@ -28,6 +31,7 @@ export const products = [
     price: 8.9,
     description: 'Tomato sauce, vegan mozzarella, basil',
     image: '/assets/img/pizza_margherita.jpg',
+    availability: true,
   },
 
   {
@@ -35,6 +39,7 @@ export const products = [
     price: 14.9,
     description: 'Tomato sauce, vegan mozzarella, salami, pepper, basil',
     image: '/assets/img/pizza_salami.jpg',
+    availability: true,
   },
 
   {
@@ -43,11 +48,14 @@ export const products = [
     description:
       'Penne, Gorgonzola cheese, butter, milk, cream, parmesan, salt, pepper',
     image: '/assets/img/penne_gorgonzola.jpg',
+    availability: true,
   },
   {
     name: 'Tiramisu',
     price: 10.2,
-    description: 'marcarpone, milk, sugger, amaretto, almond liqueur, biskuits, cold espresso ',
+    description:
+      'marcarpone, milk, sugger, amaretto, almond liqueur, biskuits, cold espresso ',
     image: '/assets/img/tiramisu.jpg',
+    availability: true,
   },
 ];

@@ -1,11 +1,13 @@
 <h2 class="text-center">Product Details</h2>
 
 <div class="d-flex justify-content-center m-5" *ngIf="product">
-   <div class="card col-lg-4">
-     <img class="img-thumbnail" src="{{ product.image}}" alt="" srcset="">
-     <h3>{{ product.name }}</h3>
+   <div class="card col-lg-4 p-2 shadow-lg">
+     <img class="img-thumbnail mb-3" src="{{ product.image}}" alt="" srcset="">
+     <h3 class="fw-bold">{{ product.name }}</h3>
+     <hr>
      <h4>{{ product.price | currency:'EUR' }}</h4>
-     <p>{{ product.description }}</p>
+     <hr>
+     <p><strong>Ingredients:</strong><br>{{ product.description }}</p>
     
      <button type="button" class="btn btn-success rounded" (click)="addToCart()">Order</button>
    </div>

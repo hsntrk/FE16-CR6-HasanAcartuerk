@@ -1,0 +1,14 @@
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+}
+
+.form-bottom{
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+}
+
+.card-table {
+    border: 1px solid rgba(0,0 0,0.1);
+    border-radius: 0.25rem;
+}

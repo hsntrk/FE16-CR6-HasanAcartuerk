@@ -1,9 +1,74 @@
-<p>cart works!</p>
+<!-- Section Cart -->
 
-<div class="cart-item" *ngFor="let item of items">
-    <img src="{{item.image}}" alt="">
-    <span>{{ item.name }} </span>
-    <span>{{ item.price | currency:'EUR' }}</span>
+<div class="container">
+
+    <!-- Section Cart Items -->
+
+    <div class="row">
+        <div class="col-8">
+            <div class="card-product">
+                <table class="table table-responsive bg-light">
+                    <thead>
+                        <tr>
+                            <th class="text-primary" style="font-size: 1.5rem;">Cart - {{count}} items(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cart-item" *ngFor="let item of items">
+                            <td><img style="width: 15rem;" src="{{item.image}}" alt=""></td>
+                            <td style="width: 70%;"><span>{{ item.name }} <br> {{item.description}} </span></td>
+                            <td style="width: 12%;"><span>Price: {{ item.price | currency:'EUR' }}</span></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <!-- Section Summary -->
+
+        <div class="col-4 mt-2">
+
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between bg-secondary">
+                    <div>
+                        <h4 class="my-0 text-white">Summary</h4>
+                    </div>
+                    <h6 class="my-0 text-white"> &nbsp; <span class="badge bg-primary rounded-pill">{{count}}</span></h6>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <h6 class="my-0">Products</h6>
+                    </div>
+                    <span class="text-muted">{{total | currency:'EUR'}}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <h6 class="my-0">Service</h6>
+
+                    </div>
+                    <span class="text-muted">{{ total * 0.1 | currency: 'EUR' }}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <h6 class="my-0 text-success">Discount</h6>
+
+                    </div>
+                    <span class="text-success">{{discount | currency:'EUR'}}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between bg-light">
+                    <h5><strong>Total amount <br>(including VAT)</strong></h5>
+                    <strong>{{totalamount | currency:'EUR'}}</strong>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
 
 </div>
-<p>{{total}}</p>
+
+<div class="container mt-5 mb-5 form-bottom">
+    <h1 class="mt-5 mb-5">Order Form</h1>
+</div>

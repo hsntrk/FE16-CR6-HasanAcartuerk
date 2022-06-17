@@ -11,6 +11,10 @@ import { FormBuilder } from '@angular/forms';
 export class CartComponent implements OnInit {
   items: IProducts[] = [];
   total: number = 0;
+  count: number = 0;
+  totalamount: number = 0;
+  discount: number = 0;
+
   checkoutForm = this.fb.group({
     name: '',
     adress: '',
@@ -23,5 +27,8 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.items = this.cartService.getItems();
     this.total = this.cartService.total();
+    this.count = this.cartService.itemsLength();
+    this.totalamount = this.cartService.totalAmount();
+    this.discount = this.cartService.discount();
   }
 }

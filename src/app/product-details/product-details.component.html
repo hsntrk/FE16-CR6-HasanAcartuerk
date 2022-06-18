@@ -1,19 +1,26 @@
 <h2 class="text-center">Product Details</h2>
 
-<div class="d-flex justify-content-center m-5" *ngIf="product">
-  <div class="card col-lg-4 p-2 shadow-lg">
+
+<div class="d-flex justify-content-center align-items-center m-5" *ngIf="product">
+  <button type="button" class="btn btn-outline-secondary rounded shadow-lg" routerLink="/menu"><i class="fa-solid fa-backward"></i>&nbsp; Go back to MENU</button>
+  <div class="card p-2 shadow-lg col-8 p-3 m-2 mb-5 text-center">
     <img class="img-thumbnail mb-3" src="{{ product.image}}" alt="" srcset="">
-    <h3 class="fw-bold">{{ product.name }}</h3>
+    <h2 class="fw-bold text-center">{{ product.name }}</h2>
     <hr>
     <h4>{{ product.price | currency:'EUR' }}</h4>
     <hr>
+    <h3><strong>Description:</strong></h3>
+    <p>{{ product.longdescription }}</p>
     <p><strong>Ingredients:</strong><br>{{ product.description }}</p>
 
     <button type="button" class="btn btn-success rounded" (click)="addToCart()">Order</button>
   </div>
-
+  <button type="button" class="btn btn-outline-secondary rounded shadow-lg" routerLink="/cart">&nbsp; Go to CART &nbsp;<i class="fa-solid fa-forward"></i></button>
 </div>
-<div class="d-flex justify-content-center m-5">
+
+<!-- used before at the bottom -->
+
+<!-- <div class="d-flex justify-content-center m-5">
   <button type="button" class="btn btn-outline-secondary rounded" routerLink="/menu"><i class="fa-solid fa-backward"></i>&nbsp; Go back to MENU</button>&nbsp;
   <button type="button" class="btn btn-outline-secondary rounded" routerLink="/cart">&nbsp; Go to CART &nbsp;<i class="fa-solid fa-forward"></i></button>
-</div>
+</div> -->
